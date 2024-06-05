@@ -64,3 +64,59 @@ if (hacker1 < hacker2) {
 } else {
     console.log("What?! You both have the same name?");
 }
+
+
+
+// BONUS TIME
+
+// Generate 3 paragraphs. Store the text in a variable type of string.
+// Make your program count the number of words in the string.
+// Make your program count the number of times the Latin word et appears.
+
+
+// Step 1: Store the text in a string variable
+var loremIpsumText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in dui tempus varius. Etiam et tortor nunc. Integer tincidunt felis eu nulla auctor, et condimentum metus convallis. Suspendisse et nulla auctor, fermentum felis vel, fermentum sem. In in felis cursus, vehicula ligula eu, elementum lorem.\n\nMaecenas et libero nec nunc bibendum mollis. Aenean et tortor nec elit cursus facilisis et non turpis. Sed sit amet magna vel turpis cursus dictum. Nullam et dolor ac mi tristique fermentum. Nullam eu orci sit amet turpis facilisis egestas. Proin et nisl sit amet leo aliquam venenatis. Suspendisse potenti.\n\nProin et mauris vel sem consequat congue. Etiam euismod ligula in felis cursus, sit amet auctor metus ullamcorper. Fusce ac magna vitae leo cursus consectetur. Nulla facilisi. Integer et metus eu turpis placerat bibendum. Etiam et dui ut massa faucibus fermentum. Nam et nunc eget magna tempus placerat in et velit.";
+
+// Step 2: Count the number of words in the string
+var words = loremIpsumText.split(' ');
+var wordCount = words.length;
+console.log("Number of words: " + wordCount);
+
+// Step 3: Count the number of times the word "et" appears
+var etCount = 0;
+for (var i = 0; i < words.length; i++) {
+    if (words[i] === "et") {
+        etCount++;
+    }
+}
+console.log("Number of times 'et' appears: " + etCount);
+
+
+
+
+
+
+
+// Step 1: Store the phrase in a variable
+var phraseToCheck = "A man, a plan, a canal, Panama!";
+
+// Step 2: Remove non-alphanumeric characters and convert to lowercase
+var cleanedPhrase = "";
+for (var i = 0; i < phraseToCheck.length; i++) {
+    var char = phraseToCheck[i].toLowerCase();
+    if (char >= 'a' && char <= 'z' || char >= '0' && char <= '9') {
+        cleanedPhrase += char;
+    }
+}
+
+// Step 3: Reverse the cleaned string
+var reversedPhrase = "";
+for (var i = cleanedPhrase.length - 1; i >= 0; i--) {
+    reversedPhrase += cleanedPhrase[i];
+}
+
+// Step 4: Compare the cleaned string with the reversed string
+var isPalindrome = cleanedPhrase === reversedPhrase;
+console.log("Is the phrase a palindrome? " + isPalindrome);
+
+
